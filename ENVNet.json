@@ -20,13 +20,10 @@
         "description": "Address Space Code for the VNet"
       }
     }
-
-　
   },
   "variables": {},
   "resources": [
     {
-
       "name": "[concat('MAHS-AVN-EN', parameters('AddressSpaceCode1'))]",
       "type": "Microsoft.Network/virtualNetworks",
       "location": "North Europe",
@@ -52,7 +49,6 @@
           "addressPrefixes": [
             "[concat(parameters('AddressSpace1'),'/',parameters('AddressSpaceCIDR1'))]"
           ]
-
         },
         "subnets": [
           {
