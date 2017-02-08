@@ -24,7 +24,7 @@
   "variables": {},
   "resources": [
     {
-      "name": "[concat('MAHS-AVN-EN', parameters('AddressSpaceCode1'))]",
+      "name": "[concat('MAHS-AVN-EN')]",
       "type": "Microsoft.Network/virtualNetworks",
       "location": "North Europe",
       "apiVersion": "2016-03-30",
@@ -47,14 +47,14 @@
       "properties": {
         "addressSpace": {
           "addressPrefixes": [
-            "[concat(parameters('AddressSpace1'),'/',parameters('AddressSpaceCIDR1'))]"
+            "['10.104.0.0/16']"
           ]
         },
         "subnets": [
           {
             "name": "Management",
             "properties": {
-              "addressPrefix": "[concat(parameters('AddressSpace1'),'/','24')]"
+              "addressPrefix": "['10.104.0.0/24']"
             }
           }
         ]
