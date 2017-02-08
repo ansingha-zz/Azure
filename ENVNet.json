@@ -2,13 +2,6 @@
   "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "VNetRegion1": {
-      "type": "string",
-      "allowedValues": [ "North Europe" ],
-      "metadata": {
-        "description": "Region where we need to create the VNet"
-      }
-    },
     "AddressSpace1": {
       "type": "string",
       "metadata": {
@@ -34,9 +27,9 @@
   "resources": [
     {
 
-      "name": "[concat('MAHS-AVN-EN', parameters('AddressSpaceCode'))]",
+      "name": "[concat('MAHS-AVN-EN', parameters('AddressSpaceCode1'))]",
       "type": "Microsoft.Network/virtualNetworks",
-      "location": "[parameters('VNetRegion')]",
+      "location": "['North Europe']",
       "apiVersion": "2016-03-30",
       "tags": {
         "ApexDeploymentName": " ",
@@ -57,7 +50,7 @@
       "properties": {
         "addressSpace": {
           "addressPrefixes": [
-            "[concat(parameters('AddressSpace'),'/',parameters('AddressSpaceCIDR'))]"
+            "[concat(parameters('AddressSpace1'),'/',parameters('AddressSpaceCIDR1'))]"
           ]
 
         },
@@ -65,7 +58,7 @@
           {
             "name": "Management",
             "properties": {
-              "addressPrefix": "[concat(parameters('AddressSpace'),'/','24')]"
+              "addressPrefix": "[concat(parameters('AddressSpace1'),'/','24')]"
             }
           }
         ]
