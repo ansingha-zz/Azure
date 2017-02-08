@@ -47,14 +47,14 @@
       "properties": {
         "addressSpace": {
           "addressPrefixes": [
-            "['10.104.0.0/16']"
+            "[concat(parameters('AddressSpace1'),'/',parameters('AddressSpaceCIDR1'))]"
           ]
         },
         "subnets": [
           {
             "name": "Management",
             "properties": {
-              "addressPrefix": "['10.104.0.0/24']"
+              "addressPrefix": "[concat(parameters('AddressSpace1'),'/','24')]"
             }
           }
         ]
