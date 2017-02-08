@@ -21,7 +21,7 @@
       }
     }
 
-
+　
   },
   "variables": {},
   "resources": [
@@ -29,7 +29,7 @@
 
       "name": "[concat('MAHS-AVN-EN', parameters('AddressSpaceCode1'))]",
       "type": "Microsoft.Network/virtualNetworks",
-      "location": "['North Europe']",
+      "location": "North Europe",
       "apiVersion": "2016-03-30",
       "tags": {
         "ApexDeploymentName": " ",
