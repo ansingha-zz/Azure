@@ -2,26 +2,26 @@
   "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "VNetRegion": {
+    "VNetRegion1": {
       "type": "string",
       "allowedValues": [ "North Europe" ],
       "metadata": {
         "description": "Region where we need to create the VNet"
       }
     },
-    "AddressSpace": {
+    "AddressSpace1": {
       "type": "string",
       "metadata": {
         "description": "Address Space for the VNet"
       }
     },
-    "AddressSpaceCIDR": {
+    "AddressSpaceCIDR1": {
       "type": "int",
       "metadata": {
         "description": "CIDR for Address Space for the VNet"
       }
     },
-    "AddressSpaceCode": {
+    "AddressSpaceCode1": {
       "type": "int",
       "metadata": {
         "description": "Address Space Code for the VNet"
